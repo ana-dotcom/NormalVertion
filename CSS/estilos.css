@@ -122,5 +122,6 @@ body {
   .img-portfolio {
     height: 180px;
     width: 224px;
+    border-radius: 20px
   }
   
