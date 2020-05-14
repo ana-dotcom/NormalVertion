@@ -1,0 +1,126 @@
+/* reset do css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+    background: pink;
+    font-family: 'Baloo 2', cursive;
+    font-size: 12px;
+  }
+
+  /* se a tela tiver pelo menos 400px, vai carregar esses estilos */
+  @media (min-width: 400px) {
+body {
+  font-size: 14px;
+}
+  }
+
+/* breakpoint */
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+      }
+
+      /* breakpoint */
+  @media (min-width: 1200px) {
+    body {
+      font-size: 20px;
+    }
+      }
+
+  header { 
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+
+  .menu {
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  a {
+    color: Deeppink;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .site-subtitle,
+  .site-title {
+    text-align: center;
+    color: #1C1C1C;
+  }
+
+  .site-title {
+    font-size: 2em;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .site-subtitle {
+    font-style: italic;
+    font-family: 'VT323', monospace;
+    line-height: 1.8em;
+  }
+
+.portfolio {
+    padding: 2em;
+}
+  .portfolio h2 {
+    font-family: 'Pangolin', cursive;
+    color: #1C1C1C;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+  }
+  
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+  }
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(2, 240px);
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+  }
+}
+
+  .portfolio figure {
+    text-align: center;
+  }
+
+  .img-portfolio {
+    height: 180px;
+    width: 224px;
+  }
+  
