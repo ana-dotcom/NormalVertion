@@ -87,9 +87,13 @@ body {
     line-height: 1.8em;
   }
 
+  .contato,
 .portfolio {
     padding: 2em;
+    min-height: 100vh;
 }
+
+  .contato h2,
   .portfolio h2 {
     font-family: 'Pangolin', cursive;
     color: #1C1C1C;
@@ -125,3 +129,15 @@ body {
     border-radius: 20px
   }
   
+.contato .icons {
+  text-align: center;
+}
+
+  .contato a {
+    color: deeppink;
+    font-size: 4em;
+  }
+
+  .contato a:hover {
+    text-decoration: none;
+  }
