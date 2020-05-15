@@ -84,12 +84,12 @@ body {
 }
 
 @keyframes animacaoTitulo {
-  0% {
+  0% /* ou "from" */{
     transform: scale(0.2) translateY(50vh);
     opacity: 0;
   }
   
-  100% {
+  100% /* ou "to" */{
     transform: scale(1) translateY(0);
     opacity: 1;
   }
@@ -112,12 +112,24 @@ body {
     line-height: 1.8em;
   }
 
+  .sobre
   .contato,
-.portfolio {
+  .portfolio {
     padding: 2em;
     min-height: 100vh;
 }
 
+@media (min-width:1200px) {
+  .sobre
+  .contato,
+  .portfolio{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+  .sobre h2
   .contato h2,
   .portfolio h2 {
     font-family: 'Pangolin', cursive;
@@ -125,7 +137,23 @@ body {
     margin-bottom: 1.5em;
     font-size: 2em;
   }
+
+  .sobre p {
+   color: #1C1C1C;
+   text-indent: 1.4em;
+   margin-bottom: 1.4em;
+   text-align: justify;
+  }
   
+.sobre a {
+  color: deeppink;
+  text-decoration: none;
+}
+
+.sobre a:hover {
+  text-decoration: underline;
+}
+
   .portfolio .grid {
     display: grid;
     gap: 2em;
