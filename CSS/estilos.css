@@ -6,7 +6,7 @@
   }
 
 body {
-    background: pink;
+    background: lightpink;
     font-family: 'Baloo 2', cursive;
     font-size: 12px;
   }
@@ -153,17 +153,14 @@ body {
 .sobre .avatar{
   float: right;
   margin-left: 2em;
+   clip-path: polygon(100% 0%, 83% 50%, 100% 100%, 25% 100%, 0 51%, 25% 0%);
 }
 
- @media (min-width: 600px) {
+ @media (max-width: 600px) {
   .sobre .avatar {
     clip-path: circle(50.0% at 50% 50%);
   }
  }
-
-.sobre .avatar img {
-  clip-path: polygon(100% 0%, 83% 50%, 100% 100%, 25% 100%, 0 51%, 25% 0%);
-}
 
 .sobre a:hover {
   text-decoration: underline;
@@ -198,8 +195,40 @@ body {
     border-radius: 20px;
   }
 
-  .img-portfolio:hover {
+  /* caso o mause passe nas imagens do portfolio..., porém estou usando o card-front e o card-back nessas mesmas imagens */
+
+  /* .img-portfolio:hover {
     transform: scale(1.2);
+  }*/
+
+.flip-card {
+  height: 180px;
+  perspective: 1000px;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+  .card-front, 
+  .card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .card-back {
+    background-color: pink;
+    height: 180px;
+    width: 224px;
+    transform: rotateY(180deg);
   }
   
 .contato .icons {
